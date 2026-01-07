@@ -1,5 +1,6 @@
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
+import ProductViewer from "./components/ProductViewer"
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <main>
       <Navbar />
       <Hero />
+      <ProductViewer />
     </main>
   )
 }
