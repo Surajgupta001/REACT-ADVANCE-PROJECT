@@ -1,16 +1,97 @@
-# React + Vite
+# MacBook Pro GSAP Showcase Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a high-fidelity, interactive product showcase website for the MacBook Pro, built using **React**, **Three.js**, and **GSAP**. It features a stunning 3D model viewer, smooth scroll-based animations, and dynamic product customization.
 
-Currently, two official plugins are available:
+## 🚀 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The goal of this project is to replicate the premium feel of Apple's product landing pages. It leverages advanced web technologies to provide an immersive user experience. Users can explore 3D models of the MacBook, witness performance highlights through scroll interactions, and see dynamic content updates.
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Interactive 3D Model**: a fully interactive 3D MacBook Pro model rendered using **React Three Fiber**.
+- **Smooth Animations**: High-performance scroll-driven animations powered by **GSAP (GreenSock Animation Platform)** and ScrollTrigger.
+- **Product Customization**: Dynamic state management allows users to interact with the model (changing video textures on the screen, etc.).
+- **Responsive Design**: Built with **Tailwind CSS** for a fully responsive layout across different screen sizes.
+- **Modern Tech Stack**: Utilizes the latest React features and Vite for a fast development experience.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend Framework
+
+- **[React 19](https://react.dev/)**: The library for web and native user interfaces.
+- **[Vite](https://vitejs.dev/)**: Next Generation Frontend Tooling.
+
+### 3D & Graphics
+
+- **[Three.js](https://threejs.org/)**: JavaScript 3D Library.
+- **[React Three Fiber](https://docs.pmnd.rs/react-three-fiber)**: A React renderer for Three.js.
+- **[React Three Drei](https://github.com/pmndrs/drei)**: Useful helpers for React Three Fiber.
+
+### Animations
+
+- **[GSAP](https://gsap.com/)**: Professional-grade JavaScript animation for the modern web.
+- **ScrollTrigger**: GSAP plugin for scroll-based animations.
+
+### Styling & UI
+
+- **[Tailwind CSS v4](https://tailwindcss.com/)**: A utility-first CSS framework for rapid UI development.
+- **[clsx](https://github.com/lukeed/clsx)**: A tiny utility for constructing `className` strings conditionally.
+
+### State Management
+
+- **[Zustand](https://github.com/pmndrs/zustand)**: A small, fast, and scalable bearbones state-management solution. Used here to manage the 3D model's state (color, scale, screen texture).
+
+## 📂 Project Structure
+
+```bash
+src/
+├── assets/          # Static assets
+├── components/      # React components
+│   ├── constants/   # Data constants
+│   ├── models/      # 3D Model components (Macbook-14/16)
+│   ├── three/       # Three.js scene components (Lights, Switcher)
+│   └── ...          # UI Sections (Hero, Features, Highlights, etc.)
+├── store/           # Zustand store for global state
+├── App.jsx          # Main application component layout
+└── main.jsx         # Entry point
+public/
+├── models/          # GLB/GLTF 3D model files
+└── videos/          # Video textures for the laptop screen
+```
+
+## 📦 Installation & Usage
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone <repository-url>
+   cd mackbook-gsap-website
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production:**
+
+   ```bash
+   npm run build
+   ```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
