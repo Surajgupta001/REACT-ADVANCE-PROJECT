@@ -4,7 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 
-function Performence() {
+function Performance() {
     const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
     const sectionRef = useRef(null);
 
@@ -97,4 +97,4 @@ function Performence() {
     )
 }
 
-export default Performence
+export default Performance
