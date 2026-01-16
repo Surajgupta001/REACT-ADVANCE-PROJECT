@@ -17,7 +17,7 @@ export default defineConfig({
         dirname(fileURLToPath(import.meta.url)),
         "src/constants"
       ),
-      "#store": resolve(
+      "#/store": resolve(
         dirname(fileURLToPath(import.meta.url)),
         "src/store"
       ),
