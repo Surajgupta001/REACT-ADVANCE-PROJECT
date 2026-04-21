@@ -11,10 +11,13 @@ function Contact() {
                 <h2>Contact Me</h2>
             </div>
             <div className='p-5 space-y-5'>
-                <img src="/images/adrian.jpg" alt="Adrian" className='w-20 rounded-full' />
+                <img
+                    src="/images/suraj-6.png"
+                    alt="suraj"
+                    className='size-24 rounded-full object-cover object-center'
+                />
                 <h3>Let's Connect</h3>
                 <p>Got an idea? A bug to squash or just wanna talk tech? Reach out!</p>
-                <p>contact@jsmastry.com</p>
                 <ul>
                     {socials.map(({ id, bg, link, icon, text }) => (
                         <li key={id} style={{ backgroundColor: bg }}>
