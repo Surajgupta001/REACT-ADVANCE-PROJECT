@@ -25,7 +25,7 @@ function Resume() {
                     <Download className='icon' />
                 </a>
             </div>
-            <Document file="files/Suraj_Kumar_Gupta_Resume.pdf" >
+            <Document file="files/Suraj_Gupta_Resume.pdf" >
                 <Page
                     pageNumber={1}
                     renderTextLayer
