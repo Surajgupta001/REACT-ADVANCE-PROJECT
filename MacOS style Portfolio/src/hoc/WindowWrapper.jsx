@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef } from 'react'
 import useWindowStore from '#/store/window';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { Draggable } from 'gsap/draggable';
+import { Draggable } from 'gsap/Draggable';
 
 function WindowWrapper(Component, windowKey) {
 
@@ -16,11 +16,11 @@ function WindowWrapper(Component, windowKey) {
             if (!el || !isOpen) return;
 
             el.style.display = 'block';
-            
+
             gsap.fromTo(
                 el,
-                {scale: 0.8, opacity: 0, y: 40},
-                {scale: 1, opacity: 1, y: 0, duration: 0.4, ease: 'power3.out'}
+                { scale: 0.8, opacity: 0, y: 40 },
+                { scale: 1, opacity: 1, y: 0, duration: 0.4, ease: 'power3.out' }
             );
         }, [isOpen]);
 
@@ -28,7 +28,7 @@ function WindowWrapper(Component, windowKey) {
             const el = ref.current;
             if (!el) return;
 
-            const [instance] = Draggable.create(el,{
+            const [instance] = Draggable.create(el, {
                 onPress: () => focusWindow(windowKey),
             })
 
@@ -46,7 +46,7 @@ function WindowWrapper(Component, windowKey) {
             <section
                 id={windowKey}
                 ref={ref}
-                style={{zIndex}}
+                style={{ zIndex }}
                 className='absolute'
             >
                 <Component {...prop} />
