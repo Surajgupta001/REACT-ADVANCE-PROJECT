@@ -1,0 +1,11 @@
+services:
+  - type: static
+    name: macos-style-portfolio
+    rootDir: MacOS style Portfolio
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    pullRequestPreviewsEnabled: true
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
